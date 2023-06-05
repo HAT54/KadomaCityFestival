@@ -1,0 +1,443 @@
+@charset "utf-8";
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #24292e;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto 130px auto;
+    font-size: 0.9rem;
+    padding: 0 4%;
+}
+
+.title_logo {
+    text-align: center;
+}
+/*仮置き
+.site-title {
+    line-height: 1px;
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+
+.site-title a {
+    color: #24292e;
+    display: block;
+}
+*/
+.sec-title {
+    font-size: 1.5rem;
+    
+    text-align: center;
+    /*本来は65px*/
+    margin-bottom: 50px;
+    
+    border-bottom: 4px solid #f08300;
+    
+    padding-bottom: 4px;
+    /*文字の下線部をマーカーで引いたように表示することもできる
+    background: linear-gradient(transparent 70%, #f08300);
+    */
+}
+.sec-title2  {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0px;
+    border-bottom:4px solid #f08300;
+    padding-bottom: 4px;
+}
+
+.sec-title3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom:4px solid #f08300;
+    padding-bottom: 4px;
+}
+/*ヘッダー(スマホ・iPad用)*/
+/* データを読み込む */
+#header3 {
+    /* フォントを指定 */
+    font-weight: 700;
+    /*
+    font-family: 'Noto Serif JP', serif;
+    */
+    font-family: 'Kaisei Tokumin', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.logo2 {
+    display: block;
+}
+/*PC版は表示しない*/
+@media(min-width: 1201px){
+    #header3{display:none; }
+}
+/*iPadで見た際はタイトルの文字を大きく表示する*/
+@media screen and (max-width:1200px) and (min-width:500px){
+    
+    #header3{font-size: 1.7rem;}
+}
+
+
+/*上部固定ヘッダー(PC用)*/
+.header2 {
+    /*下の4つはいらないかも
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sawarabi Mincho";
+    width: 100%;
+    */
+    /*heightで写真の高さ調節*/
+    height: 24.2vh;
+    background-image: url();
+    
+    background-position: center;
+    background-size: cover;
+}
+
+#header2 li img.icon {
+    width: 22px;
+}
+
+/*PC版ヘッダーの各項目にカーソルを合わせたときの変化*/
+.link_text{
+    color: black;
+    font-weight: bold;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    text-align: center;
+    padding: 1.75em 1.5em;
+    text-decoration:none ;
+    transition: .5s;
+
+}
+.link_text:hover{
+    background-color: white;
+    color: #f08300;
+}
+
+nav {
+    width: 100%;
+    padding: 20px 0;
+    /*本来は、center*/
+    text-align: right;
+    position: fixed;
+}
+.logo {
+    width: 150px;
+    margin: 0 auto 15px auto;
+    cursor: pointer;
+    /*本来は、3or1.189rem*/
+    font-size: 1.189rem;
+    /*本来は、font-weight:bold or 450*/
+    font-weight: 800;
+    font-family: 'Kaisei Tokumin', serif;
+}
+nav ul {
+    /*色は#000*/
+    background: white;
+    width: 100%;
+    /*本来は、10px*/
+    margin-top: 0px;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    /*本来は、white*/
+    color: black;
+    font-size: 1.0rem;
+
+}
+nav.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    /*色は#000*/
+    background: #fcd07e;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 3%;
+    max-height: 15%;
+    transition: all 0.6s;
+}
+nav.sticky .logo {
+    /*元々は、margin-top: 10px;*/
+    margin: 20px 0;
+}
+nav.sticky ul {
+    background-color: transparent;
+    font-size: 1.3rem;
+}
+
+/*PCで見る際には表示し、スマホかiPadで見る際には非表示*/
+@media screen and (max-width: 1000px) {
+    #header2 {
+        display: none;
+    }
+
+}
+
+
+
+/*スマホ用ヘッダー*/
+/*
+#header {
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 4%;
+    height: 170px;
+}
+
+#header ul {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+}
+
+
+#header ul li {
+    font-size: 0.9rem;
+
+    margin-left: 19.7px;
+}
+
+#header ul li a {
+    color: #24292e;
+    transition: all 0.3s;
+}
+
+#header ul li a:hover {
+    opacity: 0.5;
+}
+
+#header li img.icon {
+    
+    width: 40px;
+}
+
+#main {
+    margin-bottom: 80px;
+}
+*/
+/*iPadで表示する際のヘッダー
+@media screen and (min-width: 500px) and (max-width: 920px) {
+    #header {
+        font-size: 11.4px;
+    }
+}
+*/
+/*スマホかiPadで見る際には表示し、PCで見る際には非表示*/
+
+
+
+
+/*about*/
+#about ul {
+    margin-bottom: 30px;
+}
+
+#about ul li {
+    margin-bottom: 30px;
+    /*本来、下2つのコードはない*/
+    text-align: center;
+    font-weight: bold;
+}
+
+#about ul li:first-child {
+    margin-bottom: 30px;
+}
+
+/*#join*/
+#join div  {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#join ul li{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#join ul p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/*recordから作業再開*/
+
+#main img {
+    width: 100%;
+    max-width: 1920px;
+    height:600px;
+    /*本来は、100px*/
+    margin-top: 137px;
+    margin-bottom: 60px;
+    object-fit: cover;
+}
+/*スマホ・iPad版のヘッダー画像サイズ*/
+@media(max-width: 767px){
+    #main img{height: 250px; }
+}
+@media (max-width:1200px){
+    
+    #main img{margin-top: 30px;}
+}
+
+/*本来は、(max-width: 767px)*/
+@media screen and (max-width: 767px) {
+    .site-title {
+        margin-top: 20px;
+    }
+
+    #header {
+        flex-direction: column;
+        height: auto;
+        line-height: 40px;
+        margin-top: 20px;
+    } 
+    
+    #header li {
+        font-size: 0.8rem;
+        margin-left: 20px;
+    }
+
+    #header li img.icon {
+        /*本来は、widthは20px*/
+        width: 25px;
+        margin-top: 15px;
+    }
+
+    #join ul p {
+        font-size: 0.83rem;
+    }
+}
+
+/*========================
+　smartphone　bottom menu
+　========================*/
+
+
+.mini-text{font-size:10px;}/*文字大きさ*/
+
+ul.bottom-menu {
+    position: fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height:45px;/*高さ*/
+    margin:0;
+    padding:0;
+    background-color:#f5f5f5;/*背景色*/
+    border-top:2px solid #808080;/*バーの上の線*/
+    border-bottom:2px solid #808080;/*バーの下の線*/
+    z-index:30;}
+
+ul.bottom-menu li {
+    float:left;
+    width:25%;
+    background-color:#f5f5f5;/*背景色*/
+    list-style-type:none;
+    text-align:center;
+    font-size:25px;/*アイコンのサイズ*/}
+
+.bottom-menu li a {
+    display: block;
+    /*本来は、colorは#808080*/
+    color:#f08300;/*アイコン＆文字の色*/
+    /*本来は、padding-topは10px*/
+    padding-top:0px;
+    padding-bottom:5px;
+    line-height:10px;
+    text-decoration:none;
+    /*本来は、下の記述はない*/
+    font-weight: bold;}
+
+.bottom-menu li a:hover {
+    color:#a9a9a9;/*マウスオーバー時の色*/}
+
+/* === 展開メニュー === */
+
+ul.menu-second-level {
+    visibility: hidden;
+    opacity: 0;
+    z-index:1;}
+
+ul.menu-second-level li a{
+    /*本来は、solidではなくdashed*/
+    border-top:1px solid #a9a9a9;/*展開の枠点線*/
+        font-size:15px;/*展開メニューの文字サイズ*/
+        line-height:30px;/*文字の縦幅*/}
+
+.menu-second-level li a:hover {
+    height:100%;
+    background: lightgrey;/*マウスオーバーの色*/}
+
+li.menu-width-max ul.menu-second-level {
+    position: absolute;
+    bottom: 47px;/*高さ*/
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding:0;}
+
+li.menu-width-max:hover ul.menu-second-level {
+    bottom: 47px;/*高さ*/
+    visibility: visible;
+    opacity: 1;}
+
+li.menu-width-max ul.menu-second-level li {
+    float: left;
+    width: 100%;
+    border: none;}
+
+/*PC表示の際はボトムメニューは表示しない*/
+@media(min-width: 1201px){
+    .bottom-menu{display:none; }
+}
+
+/*スマホの時だけ*/
+@media(max-width: 767px){  
+
+    /*ボトムメニュー付けたのでフッタを底上げする（本来は、#footerなんだけどfooterどこにあんだよ）*/
+    .bottom-menu{margin-bottom:48px;}
+}
+/*iPadで見る際もボトムメニューを表示する*/
+@media (max-width:1200px){
+    
+    .bottom-menu{margin-bottom: 48px;}
+}

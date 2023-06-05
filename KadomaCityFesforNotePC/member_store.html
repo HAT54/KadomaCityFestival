@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="./aseets/css/member_store.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!--スマホ・iPad用のヘッダー(タイトルのみ)-->
+    <header id="header3">
+        <h1 class="logo2">かどま元気バル</h1>
+    </header>
+    
+    <!--PC用のヘッダー-->
+    <header id="header2">
+        <nav class="navbar">
+            <h1 class="logo">
+                <a href="index.html">かどま元気バル</a>        
+            </h1>
+            <ul class="menu">
+                <!--
+                 <li><a href="#about">かどま元気バルとは</a></li>
+                -->
+                <li><a href="member_store.html" class="link_text">参加店舗</a></li>
+                <!--
+                <li><a href="#join">参加方法</a></li>
+                -->
+                <li><a href="requirements.html" class="link_text">募集要項</a></li>
+                <li><a href="contact.html" class="link_text">お問い合わせ</a></li>
+                <li>
+                <a
+                href="https://www.facebook.com/kadomagenkibar/?locale=ja_JP"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img src="./aseets/images/facebook.png" alt="Facebook" class="icon">
+                </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+        <script>
+            const navbar= document.querySelector(".navbar");
+            const menu = document.querySelector(".menu");
+            //ヘッダーがulタグの位置に来たら、ヘッダー固定する。//
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset >= menu.offsetTop) {
+                navbar.classList.add("sticky");
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            });
+        </script>
+
+    <section id="about" class="wrapper">
+       <h2 class="sec-title">参加店舗</h2>
+       <!--
+       <ul>
+           <li>かどま元気バルってなに？</li>
+        </ul>
+        -->
+        <p>
+        ああああああああああああ
+        </p>
+    </section>
+
+    <!-- bottom navigation -->
+
+    <ul class="bottom-menu">
+        <li>
+        <!--　↓↓項目1. ホーム 　＃の部分にホームのURLを入れる -->
+            <a href="#">
+        <i class="blogicon-home"></i><br><span class="mini-text">ホーム</span></a>
+        </li>
+    
+        <li class="menu-width-max">
+        <!-- ↓↓項目2. おすすめ　すぐ下の"＃"はそのまま -->
+            <a href="#"><i class="blogicon-list"></i><br><span class="mini-text">参加方法</span></a>
+    
+            <ul class="menu-second-level">
+    
+            <!-- 下の"#"の部分におすすめ"記事URL"とタイトル等を入れる -->
+                <li><a href="#">参加方法</a></li>
+                   <li><a href="#">参加店舗（飲食）</a></li>
+                   <li><a href="#">参加店舗（物販）</a></li>
+            </ul>
+        </li>
+    
+        <li class="menu-width-max">
+    
+            <a href="#"><i class="blogicon-list"></i><br><span class="mini-text">募集要項</span></a>
+    
+            <ul class="menu-second-level">
+        
+            <!-- 下の"#"の部分におすすめ"記事URL"とタイトル等を入れる -->
+                <li><a href="#">参加店舗の募集</a></li>
+                <li><a href="#">協賛企業の募集</a></li>
+            </ul>
+        </li>
+    
+        <li>
+        <!-- ↓↓項目3.　読者登録 ↓↓の部分の書き換えが必要です -->
+            <!--  ~hatena.ne.jp/自分のはてなID/URL(http://の部分は無し)/subscribe　-->
+         <a href="contact.html" target="_blank">
+        <i class="blogicon-hatenablog"></i><br><span class="mini-text">お問い合わせ</span></a>
+        </li>
+        
+    </ul>
+</body>
+</html>
